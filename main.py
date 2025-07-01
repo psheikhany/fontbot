@@ -10,11 +10,6 @@ API_KEY = os.getenv("API_KEY")
 class Client(commands.Bot):
     async def on_ready(self):
         print(f"logged on as {self.user}")
-    #     try:
-    #         synced = await self.tree.sync()
-    #         print(f"synced {len(synced)} command(s).")
-    #     except Exception as e:
-    #         print(f"failed to sync commands: {e}")
     async def on_message(self, message):
         if message.author == self.user:
             return
